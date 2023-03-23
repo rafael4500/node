@@ -5,6 +5,8 @@ const sequece = {
 
 const produtos = {}
 
+// Adicionando uma nova altera~cao
+
 function salvarProduto(produto) {
     if (!produto.id) produto.id = sequece.id
     produtos[produto.id] = produto
