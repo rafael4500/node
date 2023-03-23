@@ -35,3 +35,17 @@ const carroGol = {
  * 
  * 
  */
+
+ const alterarMarcar = carros.map(carro => {         // atividade 01
+     if(carro.id === 2) {
+         const newcarro = {
+             id: carro.id,
+             modelo: carro.modelo,
+             marca: 'Volkswagen',
+             ano: carro.ano
+         } 
+         return newcarro
+     }
+     return carro
+ })
+ console.log(alterarMarcar)
