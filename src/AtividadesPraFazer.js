@@ -36,16 +36,6 @@ const carroGol = {
  * 
  */
 
-const alterarAno = carros.map(carro => {       // atividade 02
-   if(carro.id === 1) {
-       const newcarro = {
-           id: carro.id,
-           modelo: carro.modelo,
-           marca: carro.marca,
-           ano: 2005
-       } 
-       return newcarro
-   }
-   return carro
-})
-console.log(alterarAno)
+ carros.push(carroGol)    // Atidade 03
+ console.log(carros)
+  
