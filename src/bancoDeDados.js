@@ -7,6 +7,9 @@ const produtos = {}
 
 // Adicionando uma nova altera~cao
 
+
+// mais uma alteraçao do robson
+
 function salvarProduto(produto) {
     if (!produto.id) produto.id = sequece.id
     produtos[produto.id] = produto
