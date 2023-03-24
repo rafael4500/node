@@ -73,5 +73,10 @@ console.log(addPreco)
 
 // atividade 03
 
-const reUltimoItem = carros[0]
+const reUltimoItem = carros[2]
 console.log(reUltimoItem)
+
+// atividade 04
+
+const rePrimeirotem = carros[0]
+console.log(rePrimeirotem)
