@@ -20,6 +20,7 @@ const carros = [
 ]
 
 
+
 const precoCarros = [20000, 30000, 44000]
 
 
@@ -48,4 +49,8 @@ const precoCarros = [20000, 30000, 44000]
  * 
  */
 
-
+const descCarros = carros.map(carro => {
+    const desc = `Tenho um carro ${carro.modelo} da marca ${carro.marca} para vender urgente, o ano do veiculo e ${carro.ano}`
+    return desc
+})
+console.log(descCarros)
