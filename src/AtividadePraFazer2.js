@@ -54,3 +54,15 @@ const descCarros = carros.map(carro => {
     return desc
 })
 console.log(descCarros)
+
+const addPreco = carros.map((carro, index) => {
+    const newcarro = {
+        id: carro.id,
+        modelo: carro.modelo,
+        marca: carro.marca,
+        ano: carro.ano,
+        valor: precoCarros[index]
+    } 
+    return newcarro
+})
+console.log(addPreco)
