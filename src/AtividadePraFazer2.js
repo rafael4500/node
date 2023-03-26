@@ -55,28 +55,92 @@ const descCarros = carros.map(carro => {
     const desc = `Tenho um carro ${carro.modelo} da marca ${carro.marca} para vender urgente, o ano do veiculo e ${carro.ano}`  
     return desc
 })
-console.log(descCarros)
 
 // atividade 02
 
 const addPreco = carros.map((carro, index) => {
     const newcarro = {
-        id: carro.id,
-        modelo: carro.modelo,
-        marca: carro.marca,
-        ano: carro.ano,
+       ...carro,
         valor: precoCarros[index]
     } 
     return newcarro
 })
-console.log(addPreco)
+
+// atividade 05 
+const addDefeitos = carros.map((carro, index) => {
+    if(carro.id === 1) {
+        const newcarro = {
+           ...carro,
+            defeitos: ['macha lenta','farol quebrado', 'sinistro'],
+        } 
+        
+        return newcarro 
+    }
+    if(carro.id === 2) {
+        const newcarro = {
+            ...carro,
+            defeitos: ['lata amassada','farol queimado', 'cronico'],
+        } 
+        return newcarro 
+    }
+    if(carro.id === 3) {
+        const newcarro = {
+            ...carro,
+            defeitos: ['embreagem','lanterna traceira queimada', 'motor batido'],
+        } 
+        return newcarro 
+    }
+})
+
+// atidade complementar 
+
+const genereteNewCars = (carros) => {
+    const addDefeitos = carros.map((carro, index) => {
+        if(carro.id === 1) {
+            const newcarro = {
+               ...carro,
+                defeitos: ['macha lenta','farol quebrado', 'sinistro'],
+            } 
+            
+            return newcarro 
+        }
+        if(carro.id === 2) {
+            const newcarro = {
+                ...carro,
+                defeitos: ['lata amassada','farol queimado', 'cronico'],
+            } 
+            return newcarro 
+        }
+        if(carro.id === 3) {
+            const newcarro = {
+                ...carro,
+                defeitos: ['embreagem','lanterna traceira queimada', 'motor batido'],
+            } 
+            return newcarro 
+        }
+    })
+    return addDefeitos
+}
+
+console.log(genereteNewCars(carros))
+// atividade 06
+
+const financeiro = [true, false, false]
+
+const addStatus = carros.map((carro, index) => {
+    const newcarro = {
+        ...carro,
+        Vendido: financeiro[index],
+    } 
+    return newcarro
+})
+
 
 // atividade 03
 
-const reUltimoItem = carros[2]
-console.log(reUltimoItem)
+const reUltimoItem = carros.pop()
 
 // atividade 04
 
-const rePrimeirotem = carros[0]
-console.log(rePrimeirotem)
+const rePrimeirotem = carros.shift()
+
